@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+study_notes/
+*.pdf
+fastapi_mission_codex_study_prompt.md

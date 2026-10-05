@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ memo['title'] }}</title>
+</head>
+<body>
+    <h1>{{ memo['title'] }}</h1>
+    <p>메모 번호: {{ memo['id'] }}</p>
+    <p>작성일시: {{ memo.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+    <p style="white-space: pre-wrap">{{ memo.content }}</p>
+    <a href="/memos/{{ memo['id'] }}/edit">수정</a>
+    <form method="post" action="/memos/{{ memo['id'] }}/delete">
+    <button type="submit">삭제</button>
+</form>
+    <a href="/memos">목록으로 돌아가기</a>
+</body>
+</html>
